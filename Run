@@ -1,0 +1,10 @@
+### Training
+python run_summarization.py --mode=train --data_path=/home/siddiki/Text/finished_files/chunked/train_* --vocab_path=/home/siddiki/Text/finished_files/vocab --log_root=/home/siddiki/Logs/ --exp_name=myexperiment
+
+### Evaluation
+
+python run_summarization.py --mode=eval --data_path=/home/siddiki/Text/finished_files/chunked/val_* --vocab_path=/home/siddiki/Text/finished_files/vocab --log_root=/home/siddiki/Logs/ --exp_name=myexperiment
+
+### Decoding
+
+python run_summarization.py --mode=decode --data_path=/home/siddiki/Text/finished_files/chunked/val_* --vocab_path=/home/siddiki/Text/finished_files/vocab --log_root=/home/siddiki/Logs/ --exp_name=myexperiment
