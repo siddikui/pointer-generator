@@ -96,15 +96,19 @@ For reasons that are [difficult to diagnose](https://github.com/abisee/pointer-g
 Please see the text file Summaries for few sample summaries.
 
 Running the training with the original architecture on a GTX-1060 3GB GPU results in "Memory Exhaust Error" while allocating tensor.
+
 ![alt text][image_1]
 
 Therefore, running the network with minimal hyperparameter settings.
+
 ![alt text][image_2]
 
 After 4 hours of training, the network loss stops decreasing.
+
 ![alt text][image_3]
 
 The evaluation score with the best saved model with these settings is:
+
 ![alt text][image_4]
 
 
