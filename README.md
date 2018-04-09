@@ -84,3 +84,27 @@ For reasons that are [difficult to diagnose](https://github.com/abisee/pointer-g
 * The training job is set to keep 3 checkpoints at any one time (see the `max_to_keep` variable in `run_summarization.py`). If your newer checkpoint is corrupted, it may be that one of the older ones is not. You can switch to that checkpoint by editing the `checkpoint` file inside the `train` directory.
 * Alternatively, you can restore a "best model" from the `eval` directory. See the note **Restoring snapshots** above.
 * If you want to try to diagnose the cause of the NaNs, you can run with the `--debug=1` flag turned on. This will run [Tensorflow Debugger](https://www.tensorflow.org/versions/master/programmers_guide/debugger), which checks for NaNs and diagnoses their causes during training.
+
+[image_1]: ./misc/Pointer-Generator-Memory-Issue.png
+[image_2]: ./misc/Pointer-Generator-Settings1.png
+[image_3]: ./misc/Pointer-Not-Converging-4Hours.png
+[image_4]: ./misc/Pointer-Eval-Best.png
+
+
+
+### Results
+Please see the text file Summaries for few sample summaries.
+
+Running the training with the original architecture on a GTX-1060 3GB GPU results in "Memory Exhaust Error" while allocating tensor.
+![alt text][image_1]
+
+Therefore, running the network with minimal hyperparameter settings.
+![alt text][image_2]
+
+After 4 hours of training, the network loss stops decreasing.
+![alt text][image_3]
+
+The evaluation score with the best saved model with these settings is:
+![alt text][image_4]
+
+
