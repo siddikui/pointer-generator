@@ -89,6 +89,7 @@ For reasons that are [difficult to diagnose](https://github.com/abisee/pointer-g
 [image_2]: ./misc/Pointer-Generator-Settings1.png
 [image_3]: ./misc/Pointer-Not-Converging-4Hours.png
 [image_4]: ./misc/Pointer-Eval-Best.png
+[image_5]: ./misc/Pointer-SinglePass-ROUGE-Eval.png
 
 
 
@@ -111,4 +112,7 @@ The evaluation score with the best saved model with these settings is:
 
 ![alt text][image_4]
 
+And the ROUGE scores with Single Pass Run for the above settings:
+
+![alt text][image_5]
 

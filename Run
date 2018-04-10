@@ -1,10 +1,27 @@
 ### Training
+
 python run_summarization.py --mode=train --data_path=/home/siddiki/Text/finished_files/chunked/train_* --vocab_path=/home/siddiki/Text/finished_files/vocab --log_root=/home/siddiki/Logs/ --exp_name=myexperiment
+
 
 ### Evaluation
 
 python run_summarization.py --mode=eval --data_path=/home/siddiki/Text/finished_files/chunked/val_* --vocab_path=/home/siddiki/Text/finished_files/vocab --log_root=/home/siddiki/Logs/ --exp_name=myexperiment
 
+
 ### Decoding
 
 python run_summarization.py --mode=decode --data_path=/home/siddiki/Text/finished_files/chunked/val_* --vocab_path=/home/siddiki/Text/finished_files/vocab --log_root=/home/siddiki/Logs/ --exp_name=myexperiment
+
+
+### Attention Visualizer (Needs Python3 Installed)
+
+Clone this repo: https://github.com/abisee/attn_vis
+
+Replace attn_vis_data.json with your own file.
+
+Then in Terminal: python3 -m http.server 8000
+
+Then, open new tab with:
+
+http://localhost:8000/
+
