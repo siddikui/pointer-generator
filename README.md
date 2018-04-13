@@ -90,10 +90,14 @@ For reasons that are [difficult to diagnose](https://github.com/abisee/pointer-g
 [image_3]: ./misc/Pointer-Not-Converging-4Hours.png
 [image_4]: ./misc/Pointer-Eval-Best.png
 [image_5]: ./misc/Pointer-SinglePass-ROUGE-Eval.png
+[image_6]: ./misc/Pointer-hyperparameters2.png
 
 
 
 ### Results
+
+## Run 1
+
 Please see the text file Summaries for few sample summaries.
 
 Running the training with the original architecture on a GTX-1060 3GB GPU results in "Memory Exhaust Error" while allocating tensor.
@@ -104,7 +108,7 @@ Therefore, running the network with minimal hyperparameter settings.
 
 ![alt text][image_2]
 
-After 4 hours of training, the network loss stops decreasing.
+After 4 hours of training, the network loss stops decreasing (edit: later discovered it can take upto 4-8 days).
 
 ![alt text][image_3]
 
@@ -116,3 +120,12 @@ And the ROUGE scores with Single Pass Run for the above settings:
 
 ![alt text][image_5]
 
+## Run 2
+
+As AbiSee suggests, started traiining again with minimum max_enc_steps and max_dec_steps and increased over time. After 28 hours of training with new settings; embeddings: 128, lstms: 128, max_enc_steps: 300 and max_dec_steps: 100
+
+![alt text][image_6]
+
+Please see the Articles+Summary.txt and Summaries.txt for a qualitative measurement of the generated summaries.
+
+And the ROUGE scores are now: 

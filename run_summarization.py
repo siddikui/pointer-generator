@@ -45,12 +45,12 @@ tf.app.flags.DEFINE_string('exp_name', '', 'Name for experiment. Logs will be sa
 
 # Hyperparameters
 tf.app.flags.DEFINE_integer('hidden_dim', 128, 'dimension of RNN hidden states') #256 Original
-tf.app.flags.DEFINE_integer('emb_dim', 64, 'dimension of word embeddings') #128 Original 
-tf.app.flags.DEFINE_integer('batch_size', 8, 'minibatch size') #16 Original
-tf.app.flags.DEFINE_integer('max_enc_steps', 100, 'max timesteps of encoder (max source text tokens)') #400 Original
-tf.app.flags.DEFINE_integer('max_dec_steps', 25, 'max timesteps of decoder (max summary tokens)') #100 Original
+tf.app.flags.DEFINE_integer('emb_dim', 128, 'dimension of word embeddings') #128 Original 
+tf.app.flags.DEFINE_integer('batch_size', 4, 'minibatch size') #16 Original
+tf.app.flags.DEFINE_integer('max_enc_steps', 300, 'max timesteps of encoder (max source text tokens)') #400 Original
+tf.app.flags.DEFINE_integer('max_dec_steps', 75, 'max timesteps of decoder (max summary tokens)') #100 Original
 tf.app.flags.DEFINE_integer('beam_size', 4, 'beam size for beam search decoding.')
-tf.app.flags.DEFINE_integer('min_dec_steps', 15, 'Minimum sequence length of generated summary. Applies only for beam search  decoding mode') #35
+tf.app.flags.DEFINE_integer('min_dec_steps', 35, 'Minimum sequence length of generated summary. Applies only for beam search  decoding mode') #35
 tf.app.flags.DEFINE_integer('vocab_size', 50000, 'Size of vocabulary. These will be read from the vocabulary file in order. If the vocabulary file contains fewer words than this number, or if this number is set to 0, will take all words in the vocabulary file.')
 tf.app.flags.DEFINE_float('lr', 0.15, 'learning rate')
 tf.app.flags.DEFINE_float('adagrad_init_acc', 0.1, 'initial accumulator value for Adagrad')
