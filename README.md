@@ -91,6 +91,8 @@ For reasons that are [difficult to diagnose](https://github.com/abisee/pointer-g
 [image_4]: ./misc/Pointer-Eval-Best.png
 [image_5]: ./misc/Pointer-SinglePass-ROUGE-Eval.png
 [image_6]: ./misc/Pointer-hyperparameters2.png
+[image_7]: ./misc/ROUGE-Paper.png
+[image_8]: ./misc/ROUGE-Evaluation-Run2.png
 
 
 
@@ -128,4 +130,14 @@ As AbiSee suggests, started traiining again with minimum max_enc_steps and max_d
 
 Please see the Articles+Summary.txt and Summaries.txt for a qualitative measurement of the generated summaries.
 
-And the ROUGE scores are now: 
+The ROUGE Scores from the paper are:
+
+![alt text][image_7]
+
+And the ROUGE scores without coverage are now: 
+
+![alt text][image_8]
+
+The next step is to let the model train further with max_enc_steps to 400 and max_dec_steps to 100 and apply coverage afterwards.
+
+
