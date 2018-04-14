@@ -93,7 +93,7 @@ For reasons that are [difficult to diagnose](https://github.com/abisee/pointer-g
 [image_6]: ./misc/Pointer-hyperparameters2.png
 [image_7]: ./misc/ROUGE-Paper.png
 [image_8]: ./misc/ROUGE-Evaluation-Run2.png
-
+[image_9]: ./misc/ROUGE-Coverage-Test.png
 
 
 ### Results
@@ -138,6 +138,7 @@ And the ROUGE scores without coverage are now:
 
 ![alt text][image_8]
 
-The next step is to let the model train further with max_enc_steps to 400 and max_dec_steps to 100 and apply coverage afterwards.
+The next step is to let the model train further with max_enc_steps to 360 and max_dec_steps to 90 and apply coverage afterwards.
+These are the ROUGE scores against the CNN/daily mail TEST Dataset after 44-50 hours of training.
 
-
+![alt text][image_9]
